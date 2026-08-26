@@ -74,12 +74,12 @@
   },
   "semanticTokenColors": {
     "namespace": "#A98AB2",
-    "type": "#D0B344",
-    "class": "#D0B344",
-    "enum": "#D0B344",
-    "interface": "#D0B344",
-    "struct": "#D0B344",
-    "typeParameter": "#54A9A9",
+    "type": "#A6E22E",
+    "class": "#A6E22E",
+    "enum": "#A6E22E",
+    "interface": "#A6E22E",
+    "struct": "#A6E22E",
+    "typeParameter": "#5FC9A8",
     "parameter": "#6089B4",
     "variable": "#C5C8C6",
     "variable.readonly": "#8080FF",
@@ -88,15 +88,15 @@
     "property.readonly": "#8080FF",
     "enumMember": "#8080FF",
     "event": "#A98AB2",
-    "function": "#E87400",
+    "function": "#66D9EF",
     "function.defaultLibrary": "#A98AB2",
-    "method": "#E87400",
+    "method": "#66D9EF",
     "method.defaultLibrary": "#A98AB2",
     "macro": "#D08442",
     "label": "#D9B700",
-    "decorator": "#66D9EF",
+    "decorator": "#54A9A9",
     "selfParameter": "#D67BD6",
-    "builtinConstant": "#54A9A9",
+    "builtinConstant": "#5FC9A8",
     "*.declaration": {
       "fontStyle": "bold"
     },
@@ -106,23 +106,23 @@
     "*.static": {
       "fontStyle": "italic"
     },
-    "type.defaultLibrary:go": "#54A9A9",
+    "type.defaultLibrary:go": "#5FC9A8",
     "variable.readonly:go": "#8080FF",
     "selfParameter:python": "#D67BD6",
     "clsParameter:python": "#D67BD6",
     "magicFunction:python": "#A98AB2",
-    "builtinConstant:python": "#54A9A9",
+    "builtinConstant:python": "#5FC9A8",
     "module:python": "#A98AB2",
     "variable.defaultLibrary:typescript": "#CC555A",
     "variable.defaultLibrary:javascript": "#CC555A",
     "lifetime:rust": "#D08442",
-    "builtinType:rust": "#54A9A9",
-    "decorator:python": "#66D9EF",
-    "function.decorator": "#66D9EF",
-    "method.decorator": "#66D9EF",
-    "class.decorator": "#66D9EF",
-    "function.decorator:python": "#66D9EF",
-    "class.decorator:python": "#66D9EF"
+    "builtinType:rust": "#5FC9A8",
+    "decorator:python": "#54A9A9",
+    "function.decorator": "#54A9A9",
+    "method.decorator": "#54A9A9",
+    "class.decorator": "#54A9A9",
+    "function.decorator:python": "#54A9A9",
+    "class.decorator:python": "#54A9A9"
   },
   "tokenColors": [
     {
@@ -145,7 +145,7 @@
       "scope": "comment",
       "settings": {
         "fontStyle": "",
-        "foreground": "#7C8A99"
+        "foreground": "#8A7F6E"
       }
     },
     {
@@ -177,7 +177,7 @@
       "scope": "constant.language",
       "settings": {
         "fontStyle": "",
-        "foreground": "#54A9A9"
+        "foreground": "#5FC9A8"
       }
     },
     {
@@ -209,7 +209,7 @@
       "scope": "entity.name.class, entity.name.type, entity.name.namespace, entity.name.scope-resolution",
       "settings": {
         "fontStyle": "",
-        "foreground": "#D0B344"
+        "foreground": "#A6E22E"
       }
     },
     {
@@ -228,7 +228,7 @@
       "scope": "entity.name.function",
       "settings": {
         "fontStyle": "",
-        "foreground": "#E87400"
+        "foreground": "#66D9EF"
       }
     },
     {
@@ -701,7 +701,7 @@
       "name": "Python decorator",
       "scope": "entity.name.function.decorator.python, punctuation.definition.decorator.python, meta.function.decorator.python entity.name.function.python",
       "settings": {
-        "foreground": "#66D9EF"
+        "foreground": "#54A9A9"
       }
     }
   ]
