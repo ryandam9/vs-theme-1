@@ -60,8 +60,8 @@ one, with a contrast warning below 4.5:1.
 | --- | --- | --- |
 | function / method | `#66D9EF` cyan | 10.11:1 |
 | variable | `#C5C8C6` default fg | 9.88:1 |
-| string | `#9AD0A8` seafoam | 9.50:1 |
 | builtin type | `#5FC9A8` mint | 8.26:1 |
+| string | `#9CBF6E` moss green | 8.01:1 |
 | `self` / `cls` | `#E08FE0` light magenta | 7.28:1 |
 | class / type | `#7BB75B` green | 6.96:1 |
 | keyword | `#8FA3B8` blue-gray | 6.43:1 |
