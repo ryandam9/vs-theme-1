@@ -121,7 +121,12 @@
     "variable.defaultLibrary:javascript": "$jsVar",
     "lifetime:rust": "$orange",
     "builtinType:rust": "$teal",
-    "decorator:python": "$decoratorRef"
+    "decorator:python": "$decoratorRef",
+    "function.decorator": "$decoratorRef",
+    "method.decorator": "$decoratorRef",
+    "class.decorator": "$decoratorRef",
+    "function.decorator:python": "$decoratorRef",
+    "class.decorator:python": "$decoratorRef"
   },
   "tokenColors": [
     {

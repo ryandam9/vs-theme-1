@@ -118,7 +118,12 @@
     "variable.defaultLibrary:javascript": "#CC555A",
     "lifetime:rust": "#D08442",
     "builtinType:rust": "#408080",
-    "decorator:python": "#66D9EF"
+    "decorator:python": "#66D9EF",
+    "function.decorator": "#66D9EF",
+    "method.decorator": "#66D9EF",
+    "class.decorator": "#66D9EF",
+    "function.decorator:python": "#66D9EF",
+    "class.decorator:python": "#66D9EF"
   },
   "tokenColors": [
     {
