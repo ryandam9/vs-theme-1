@@ -1,0 +1,9 @@
+.git/**
+.gitignore
+.vscode/**
+src/**
+scripts/**
+samples/**
+build.js
+PLAN.md
+*.vsix

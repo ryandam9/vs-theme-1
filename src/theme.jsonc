@@ -1,0 +1,700 @@
+// src/theme.jsonc -- AUTHORING SOURCE. Edit this + src/palette.json, then `npm run build`.
+// Colors are written as "$name" / "$name+AA" and resolved from src/palette.json.
+// Generated from src/upstream.json by scripts/refify.js; hand-edited thereafter.
+{
+  "$schema": "vscode://schemas/color-theme",
+  "name": "My Monokai Dimmed",
+  "type": "dark",
+  "semanticHighlighting": true,
+  "colors": {
+    "dropdown.background": "$dropdown",
+    "list.activeSelectionBackground": "$listSel",
+    "quickInputList.focusBackground": "$listSel",
+    "list.inactiveSelectionBackground": "$selInactive",
+    "list.hoverBackground": "$hover",
+    "list.highlightForeground": "$highlight",
+    "button.background": "$button",
+    "editor.background": "$bg",
+    "editor.foreground": "$fg",
+    "editor.selectionBackground": "$sel+80",
+    "minimap.selectionHighlight": "$sel+80",
+    "editor.selectionHighlightBackground": "$selHi+80",
+    "editor.lineHighlightBackground": "$line",
+    "editorLineNumber.activeForeground": "$muted",
+    "editor.wordHighlightBackground": "$wordHi+80",
+    "editor.wordHighlightStrongBackground": "$wordHiStrong+80",
+    "editorCursor.foreground": "$cursor",
+    "editorWhitespace.foreground": "$whitespace",
+    "editorIndentGuide.background1": "$whitespace",
+    "editorIndentGuide.activeBackground1": "$indentActive",
+    "editorGroupHeader.tabsBackground": "$bgTabs",
+    "tab.inactiveBackground": "$bgTabInactive",
+    "tab.border": "$line",
+    "tab.inactiveForeground": "$fgTab",
+    "tab.lastPinnedBorder": "$chrome",
+    "peekView.border": "$accent",
+    "panelTitle.activeForeground": "$white",
+    "statusBar.background": "$chrome",
+    "statusBar.debuggingBackground": "$chrome",
+    "statusBar.noFolderBackground": "$chrome",
+    "titleBar.activeBackground": "$chrome",
+    "statusBarItem.remoteBackground": "$accent",
+    "ports.iconRunningProcessForeground": "$fgUI",
+    "activityBar.background": "$bgActivity",
+    "activityBar.foreground": "$white",
+    "activityBarBadge.background": "$accent",
+    "sideBar.background": "$bgDeep",
+    "sideBarSectionHeader.background": "$chrome",
+    "menu.background": "$bgDeep",
+    "menu.foreground": "$fgUI",
+    "pickerGroup.foreground": "$fgMuted",
+    "inputOption.activeBorder": "$accent",
+    "focusBorder": "$accent",
+    "agentsPanel.border": "$line",
+    "agentsChatInput.border": "$line",
+    "agentsChatInput.focusBorder": "$accent",
+    "agentsNewSessionButton.border": "$line",
+    "terminal.ansiBlack": "$bg",
+    "terminal.ansiRed": "$ansiRed",
+    "terminal.ansiGreen": "$ansiGreen",
+    "terminal.ansiYellow": "$ansiYellow",
+    "terminal.ansiBlue": "$ansiBlue",
+    "terminal.ansiMagenta": "$ansiMagenta",
+    "terminal.ansiCyan": "$ansiCyan",
+    "terminal.ansiWhite": "$ansiWhite",
+    "terminal.ansiBrightBlack": "$gutter",
+    "terminal.ansiBrightRed": "$ansiBrightRed",
+    "terminal.ansiBrightGreen": "$ansiBrightGreen",
+    "terminal.ansiBrightYellow": "$ansiBrightYellow",
+    "terminal.ansiBrightBlue": "$ansiBrightBlue",
+    "terminal.ansiBrightMagenta": "$mauve",
+    "terminal.ansiBrightCyan": "$ansiBrightCyan",
+    "terminal.ansiBrightWhite": "$ansiBrightWhite",
+    "terminal.inactiveSelectionBackground": "$sel+40",
+    "agentsBottomPanel.border": "$transparent",
+    "agentsCard.border": "$transparent",
+    "surface.border": "$transparent"
+  },
+  "semanticTokenColors": {
+    "namespace": "$purple",
+    "type": "$type",
+    "class": "$type",
+    "enum": "$type",
+    "interface": "$type",
+    "struct": "$type",
+    "typeParameter": "$teal",
+    "parameter": "$blue",
+    "variable": "$fg",
+    "variable.readonly": "$violet",
+    "variable.defaultLibrary": "$red",
+    "property": "$purple",
+    "property.readonly": "$violet",
+    "enumMember": "$violet",
+    "event": "$purple",
+    "function": "$func",
+    "function.defaultLibrary": "$purple",
+    "method": "$func",
+    "method.defaultLibrary": "$purple",
+    "macro": "$orange",
+    "label": "$gold",
+    "comment": "$comment",
+    "string": "$string",
+    "keyword": "$purple",
+    "modifier": "$purple",
+    "number": "$blue",
+    "regexp": "$orange",
+    "operator": "$gray",
+    "decorator": "$gold",
+    "selfParameter": "$red",
+    "builtinConstant": "$teal",
+    "*.declaration": {
+      "fontStyle": "bold"
+    },
+    "*.deprecated": {
+      "strikethrough": true
+    },
+    "*.static": {
+      "fontStyle": "italic"
+    },
+    "type.defaultLibrary:go": "$teal",
+    "variable.readonly:go": "$violet",
+    "namespace:go": "$string",
+    "operator:go": "$gray",
+    "selfParameter:python": "$red",
+    "clsParameter:python": "$red",
+    "magicFunction:python": "$purple",
+    "builtinConstant:python": "$teal",
+    "module:python": "$purple",
+    "variable.defaultLibrary:typescript": "$jsVar",
+    "variable.defaultLibrary:javascript": "$jsVar",
+    "lifetime:rust": "$orange",
+    "builtinType:rust": "$teal"
+  },
+  "tokenColors": [
+    {
+      "settings": {
+        "foreground": "$fg"
+      }
+    },
+    {
+      "scope": [
+        "meta.embedded",
+        "source.groovy.embedded",
+        "variable.legacy.builtin.python"
+      ],
+      "settings": {
+        "foreground": "$fg"
+      }
+    },
+    {
+      "name": "Comment",
+      "scope": "comment",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$comment"
+      }
+    },
+    {
+      "name": "String",
+      "scope": "string",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$string"
+      }
+    },
+    {
+      "name": "String Embedded Source",
+      "scope": "string source",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$orange"
+      }
+    },
+    {
+      "name": "Number",
+      "scope": "constant.numeric",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$blue"
+      }
+    },
+    {
+      "name": "Built-in constant",
+      "scope": "constant.language",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$teal"
+      }
+    },
+    {
+      "name": "User-defined constant",
+      "scope": "constant.character, constant.other",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$violet"
+      }
+    },
+    {
+      "name": "Support",
+      "scope": "support",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$red"
+      }
+    },
+    {
+      "name": "Storage",
+      "scope": "storage",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$purple"
+      }
+    },
+    {
+      "name": "Class name",
+      "scope": "entity.name.class, entity.name.type, entity.name.namespace, entity.name.scope-resolution",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$type"
+      }
+    },
+    {
+      "name": "Inherited class",
+      "scope": [
+        "entity.other.inherited-class",
+        "punctuation.separator.namespace.ruby"
+      ],
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$red"
+      }
+    },
+    {
+      "name": "Function name",
+      "scope": "entity.name.function",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$func"
+      }
+    },
+    {
+      "name": "Function argument",
+      "scope": "variable.parameter",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$blue"
+      }
+    },
+    {
+      "name": "Library function",
+      "scope": "support.function",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$purple"
+      }
+    },
+    {
+      "name": "Keyword",
+      "scope": "keyword",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$gray"
+      }
+    },
+    {
+      "name": "Class Variable",
+      "scope": "variable.other, variable.js, punctuation.separator.variable",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$blue"
+      }
+    },
+    {
+      "name": "Invalid",
+      "scope": "invalid",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$invalid"
+      }
+    },
+    {
+      "name": "Normal Variable",
+      "scope": "variable.other.php, variable.other.normal",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$blue"
+      }
+    },
+    {
+      "name": "Function Object",
+      "scope": "meta.function-call.object",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$purple"
+      }
+    },
+    {
+      "name": "Function Call Variable",
+      "scope": "variable.other.property",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$purple"
+      }
+    },
+    {
+      "name": "Keyword Control / Special",
+      "scope": [
+        "keyword.control",
+        "keyword.operator.new.cpp",
+        "keyword.operator.delete.cpp",
+        "keyword.other.using",
+        "keyword.other.directive.using",
+        "keyword.other.operator"
+      ],
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$purple"
+      }
+    },
+    {
+      "name": "Tag",
+      "scope": "meta.tag",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$yellow"
+      }
+    },
+    {
+      "name": "Tag Name",
+      "scope": "entity.name.tag",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$blue"
+      }
+    },
+    {
+      "name": "Doctype",
+      "scope": "meta.doctype, meta.tag.sgml-declaration.doctype, meta.tag.sgml.doctype",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$string"
+      }
+    },
+    {
+      "name": "Tag Inline Source",
+      "scope": "meta.tag.inline source, text.html.php.source",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$string"
+      }
+    },
+    {
+      "name": "Tag Other",
+      "scope": "meta.tag.other, entity.name.tag.style, entity.name.tag.script, meta.tag.block.script, source.js.embedded punctuation.definition.tag.html, source.css.embedded punctuation.definition.tag.html",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$purple"
+      }
+    },
+    {
+      "name": "Tag Attribute",
+      "scope": "entity.other.attribute-name, meta.tag punctuation.definition.string",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$yellow"
+      }
+    },
+    {
+      "name": "Tag Value",
+      "scope": "meta.tag string -source -punctuation, text source text meta.tag string -punctuation",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$blue"
+      }
+    },
+    {
+      "name": "Meta Brace",
+      "scope": "punctuation.section.embedded -(source string source punctuation.section.embedded), meta.brace.erb.html",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$yellow"
+      }
+    },
+    {
+      "name": "HTML ID",
+      "scope": "meta.toc-list.id",
+      "settings": {
+        "foreground": "$string"
+      }
+    },
+    {
+      "name": "HTML String",
+      "scope": "string.quoted.double.html, punctuation.definition.string.begin.html, punctuation.definition.string.end.html, punctuation.definition.string.end.html source, string.quoted.double.html source",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$string"
+      }
+    },
+    {
+      "name": "HTML Tags",
+      "scope": "punctuation.definition.tag.html, punctuation.definition.tag.begin, punctuation.definition.tag.end",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$blue"
+      }
+    },
+    {
+      "name": "CSS ID",
+      "scope": "meta.selector entity.other.attribute-name.id",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$purple"
+      }
+    },
+    {
+      "name": "CSS Property Name",
+      "scope": "source.css support.type.property-name",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$gray"
+      }
+    },
+    {
+      "name": "CSS Property Value",
+      "scope": "meta.property-group support.constant.property-value, meta.property-value support.constant.property-value",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$red"
+      }
+    },
+    {
+      "name": "JavaScript Variable",
+      "scope": "variable.language.js",
+      "settings": {
+        "foreground": "$jsVar"
+      }
+    },
+    {
+      "name": "Template Definition",
+      "scope": [
+        "punctuation.definition.template-expression",
+        "punctuation.section.embedded.coffee"
+      ],
+      "settings": {
+        "foreground": "$orange"
+      }
+    },
+    {
+      "name": "Reset JavaScript string interpolation expression",
+      "scope": [
+        "meta.template.expression"
+      ],
+      "settings": {
+        "foreground": "$fg"
+      }
+    },
+    {
+      "name": "PHP Function Call",
+      "scope": "meta.function-call.object.php",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$yellow"
+      }
+    },
+    {
+      "name": "PHP Single Quote HMTL Fix",
+      "scope": "punctuation.definition.string.end.php, punctuation.definition.string.begin.php",
+      "settings": {
+        "foreground": "$string"
+      }
+    },
+    {
+      "name": "PHP Parenthesis HMTL Fix",
+      "scope": "source.php.embedded.line.html",
+      "settings": {
+        "foreground": "$gray"
+      }
+    },
+    {
+      "name": "PHP Punctuation Embedded",
+      "scope": "punctuation.section.embedded.begin.php, punctuation.section.embedded.end.php",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$orange"
+      }
+    },
+    {
+      "name": "Ruby Symbol",
+      "scope": "constant.other.symbol.ruby",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$string"
+      }
+    },
+    {
+      "name": "Ruby Variable",
+      "scope": "variable.language.ruby",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$yellow"
+      }
+    },
+    {
+      "name": "Ruby Special Method",
+      "scope": "keyword.other.special-method.ruby",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$gold"
+      }
+    },
+    {
+      "name": "Ruby Embedded Source",
+      "scope": [
+        "punctuation.section.embedded.begin.ruby",
+        "punctuation.section.embedded.end.ruby"
+      ],
+      "settings": {
+        "foreground": "$orange"
+      }
+    },
+    {
+      "name": "SQL",
+      "scope": "keyword.other.DML.sql",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$yellow"
+      }
+    },
+    {
+      "name": "diff: header",
+      "scope": "meta.diff, meta.diff.header",
+      "settings": {
+        "fontStyle": "italic",
+        "foreground": "$diffHeader"
+      }
+    },
+    {
+      "name": "diff: deleted",
+      "scope": "markup.deleted",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$diffDel"
+      }
+    },
+    {
+      "name": "diff: changed",
+      "scope": "markup.changed",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$diffChg"
+      }
+    },
+    {
+      "name": "diff: inserted",
+      "scope": "markup.inserted",
+      "settings": {
+        "foreground": "$diffIns"
+      }
+    },
+    {
+      "name": "Markup Quote",
+      "scope": "markup.quote",
+      "settings": {
+        "foreground": "$purple"
+      }
+    },
+    {
+      "name": "Markup Lists",
+      "scope": "markup.list",
+      "settings": {
+        "foreground": "$string"
+      }
+    },
+    {
+      "name": "Markup Styling",
+      "scope": "markup.bold, markup.italic",
+      "settings": {
+        "foreground": "$blue"
+      }
+    },
+    {
+      "name": "Markup Inline",
+      "scope": "markup.inline.raw",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$pink"
+      }
+    },
+    {
+      "name": "Markup Headings",
+      "scope": "markup.heading",
+      "settings": {
+        "foreground": "$yellow"
+      }
+    },
+    {
+      "name": "Markup Setext Header",
+      "scope": "markup.heading.setext",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "$yellow"
+      }
+    },
+    {
+      "name": "Markdown Headings",
+      "scope": "markup.heading.markdown",
+      "settings": {
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Markdown Quote",
+      "scope": "markup.quote.markdown",
+      "settings": {
+        "fontStyle": "italic",
+        "foreground": ""
+      }
+    },
+    {
+      "name": "Markdown Bold",
+      "scope": "markup.bold.markdown",
+      "settings": {
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Markdown Link Title/Description",
+      "scope": "string.other.link.title.markdown,string.other.link.description.markdown",
+      "settings": {
+        "foreground": "$mauve"
+      }
+    },
+    {
+      "name": "Markdown Underline Link/Image",
+      "scope": "markup.underline.link.markdown,markup.underline.link.image.markdown",
+      "settings": {
+        "foreground": ""
+      }
+    },
+    {
+      "name": "Markdown Emphasis",
+      "scope": "markup.italic.markdown",
+      "settings": {
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "markup.strikethrough",
+      "settings": {
+        "fontStyle": "strikethrough"
+      }
+    },
+    {
+      "name": "Markdown Punctuation Definition Link",
+      "scope": "markup.list.unnumbered.markdown, markup.list.numbered.markdown",
+      "settings": {
+        "foreground": ""
+      }
+    },
+    {
+      "name": "Markdown List Punctuation",
+      "scope": [
+        "punctuation.definition.list.begin.markdown"
+      ],
+      "settings": {
+        "foreground": ""
+      }
+    },
+    {
+      "scope": "token.info-token",
+      "settings": {
+        "foreground": "$info"
+      }
+    },
+    {
+      "scope": "token.warn-token",
+      "settings": {
+        "foreground": "$warn"
+      }
+    },
+    {
+      "scope": "token.error-token",
+      "settings": {
+        "foreground": "$error"
+      }
+    },
+    {
+      "scope": "token.debug-token",
+      "settings": {
+        "foreground": "$debug"
+      }
+    },
+    {
+      "name": "this.self",
+      "scope": "variable.language",
+      "settings": {
+        "foreground": "$red"
+      }
+    }
+  ]
+}
