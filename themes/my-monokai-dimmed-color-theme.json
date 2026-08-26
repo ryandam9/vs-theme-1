@@ -153,7 +153,7 @@
       "scope": "string",
       "settings": {
         "fontStyle": "",
-        "foreground": "#E0A882"
+        "foreground": "#9AD0A8"
       }
     },
     {
@@ -331,7 +331,7 @@
       "scope": "meta.doctype, meta.tag.sgml-declaration.doctype, meta.tag.sgml.doctype",
       "settings": {
         "fontStyle": "",
-        "foreground": "#E0A882"
+        "foreground": "#9AD0A8"
       }
     },
     {
@@ -339,7 +339,7 @@
       "scope": "meta.tag.inline source, text.html.php.source",
       "settings": {
         "fontStyle": "",
-        "foreground": "#E0A882"
+        "foreground": "#9AD0A8"
       }
     },
     {
@@ -378,7 +378,7 @@
       "name": "HTML ID",
       "scope": "meta.toc-list.id",
       "settings": {
-        "foreground": "#E0A882"
+        "foreground": "#9AD0A8"
       }
     },
     {
@@ -386,7 +386,7 @@
       "scope": "string.quoted.double.html, punctuation.definition.string.begin.html, punctuation.definition.string.end.html, punctuation.definition.string.end.html source, string.quoted.double.html source",
       "settings": {
         "fontStyle": "",
-        "foreground": "#E0A882"
+        "foreground": "#9AD0A8"
       }
     },
     {
@@ -459,7 +459,7 @@
       "name": "PHP Single Quote HMTL Fix",
       "scope": "punctuation.definition.string.end.php, punctuation.definition.string.begin.php",
       "settings": {
-        "foreground": "#E0A882"
+        "foreground": "#9AD0A8"
       }
     },
     {
@@ -482,7 +482,7 @@
       "scope": "constant.other.symbol.ruby",
       "settings": {
         "fontStyle": "",
-        "foreground": "#E0A882"
+        "foreground": "#9AD0A8"
       }
     },
     {
@@ -561,7 +561,7 @@
       "name": "Markup Lists",
       "scope": "markup.list",
       "settings": {
-        "foreground": "#E0A882"
+        "foreground": "#9AD0A8"
       }
     },
     {

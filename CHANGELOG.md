@@ -32,7 +32,7 @@ Palette, with contrast against the `#1E1E1E` editor background:
 | --- | --- | --- | --- |
 | class / type | `#9B0000` | `#7BB75B` green | 1.51:1 -> 6.96:1 |
 | function / method | `#CE6700` | `#66D9EF` cyan | 4.42:1 -> 10.11:1 |
-| string | `#9AA83A` | `#E0A882` soft peach | 6.38:1 -> 8.01:1 |
+| string | `#9AA83A` | `#9AD0A8` seafoam | 6.38:1 -> 9.50:1 |
 | `self` / `cls` | `#C7444A` | `#E08FE0` light magenta | 3.46:1 -> 7.28:1 |
 | decorator | `#D9B700` | `#54A9A9` teal | 8.51:1 -> 6.05:1 |
 | builtin type | `#408080` | `#5FC9A8` mint | 3.67:1 -> 8.26:1 |
@@ -41,7 +41,7 @@ Palette, with contrast against the `#1E1E1E` editor background:
 | comment | `#9A9B99` | `#8A7F6E` taupe | 5.97:1 -> 4.24:1 |
 
 Every color was checked two ways: contrast against the background, and CIE Lab distance
-against every other syntax color. Nothing sits closer than dE 17 to a neighbour, and the
+against every other syntax color. Nothing sits closer than dE 15 to a neighbour, and the
 only color under 4.5:1 is `comment`, which is meant to recede.
 
 Everything else is identical to upstream — enforced by `npm run verify`, which lists all
