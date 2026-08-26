@@ -6,10 +6,23 @@
   "publisher": "ravi",
   "license": "MIT",
   "private": true,
-  "engines": { "vscode": "^1.70.0" },
-  "categories": ["Themes"],
-  "keywords": ["monokai", "dimmed", "dark", "semantic highlighting", "theme"],
-  "galleryBanner": { "color": "#1E1E1E", "theme": "dark" },
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "monokai",
+    "dimmed",
+    "dark",
+    "semantic highlighting",
+    "theme"
+  ],
+  "galleryBanner": {
+    "color": "#1E1E1E",
+    "theme": "dark"
+  },
   "contributes": {
     "themes": [
       {
@@ -25,6 +38,7 @@
     "verify": "node build.js && node scripts/verify.js",
     "link": "ln -sfn \"$PWD\" \"$HOME/.vscode/extensions/my-monokai\" && echo linked",
     "package": "npm run build && npx --yes @vscode/vsce package --no-dependencies",
-    "install-local": "npm run package && code --install-extension my-monokai-1.0.0.vsix --force"
+    "install-local": "npm run package && code --install-extension my-monokai-1.0.0.vsix --force",
+    "tokens": "node scripts/tokens.js"
   }
 }
