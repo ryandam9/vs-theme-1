@@ -42,6 +42,8 @@
   "orange":         "#D08442",
   "red":            "#C7444A",
   "gray":           "#676867",
+  "keyword":        "#676867",
+  "keywordControl": "#9872A2",
   "teal":           "#408080",
   "violet":         "#8080FF",
   "func":           "#CE6700",
@@ -52,7 +54,7 @@
   "pink":           "#FF0080",
 
   "//type": "DEVIATION from upstream Monokai Dimmed, which uses #9B0000 (~1.5:1 contrast on bg -- unreadable). Set back to #9B0000 to restore stock.",
-  "type":           "#8FBCBB",
+  "type":           "#D0B344",
 
   "// ---- diff / markup ----": "",
   "diffHeader":     "#E0EDDD",

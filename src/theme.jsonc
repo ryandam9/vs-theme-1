@@ -97,13 +97,6 @@
     "method.defaultLibrary": "$purple",
     "macro": "$orange",
     "label": "$gold",
-    "comment": "$comment",
-    "string": "$string",
-    "keyword": "$purple",
-    "modifier": "$purple",
-    "number": "$blue",
-    "regexp": "$orange",
-    "operator": "$gray",
     "decorator": "$gold",
     "selfParameter": "$red",
     "builtinConstant": "$teal",
@@ -119,7 +112,6 @@
     "type.defaultLibrary:go": "$teal",
     "variable.readonly:go": "$violet",
     "namespace:go": "$string",
-    "operator:go": "$gray",
     "selfParameter:python": "$red",
     "clsParameter:python": "$red",
     "magicFunction:python": "$purple",
@@ -258,7 +250,7 @@
       "scope": "keyword",
       "settings": {
         "fontStyle": "",
-        "foreground": "$gray"
+        "foreground": "$keyword"
       }
     },
     {
@@ -313,7 +305,7 @@
       ],
       "settings": {
         "fontStyle": "",
-        "foreground": "$purple"
+        "foreground": "$keywordControl"
       }
     },
     {

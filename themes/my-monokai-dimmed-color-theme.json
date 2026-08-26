@@ -74,11 +74,11 @@
   },
   "semanticTokenColors": {
     "namespace": "#9872A2",
-    "type": "#8FBCBB",
-    "class": "#8FBCBB",
-    "enum": "#8FBCBB",
-    "interface": "#8FBCBB",
-    "struct": "#8FBCBB",
+    "type": "#D0B344",
+    "class": "#D0B344",
+    "enum": "#D0B344",
+    "interface": "#D0B344",
+    "struct": "#D0B344",
     "typeParameter": "#408080",
     "parameter": "#6089B4",
     "variable": "#C5C8C6",
@@ -94,13 +94,6 @@
     "method.defaultLibrary": "#9872A2",
     "macro": "#D08442",
     "label": "#D9B700",
-    "comment": "#9A9B99",
-    "string": "#9AA83A",
-    "keyword": "#9872A2",
-    "modifier": "#9872A2",
-    "number": "#6089B4",
-    "regexp": "#D08442",
-    "operator": "#676867",
     "decorator": "#D9B700",
     "selfParameter": "#C7444A",
     "builtinConstant": "#408080",
@@ -116,7 +109,6 @@
     "type.defaultLibrary:go": "#408080",
     "variable.readonly:go": "#8080FF",
     "namespace:go": "#9AA83A",
-    "operator:go": "#676867",
     "selfParameter:python": "#C7444A",
     "clsParameter:python": "#C7444A",
     "magicFunction:python": "#9872A2",
@@ -212,7 +204,7 @@
       "scope": "entity.name.class, entity.name.type, entity.name.namespace, entity.name.scope-resolution",
       "settings": {
         "fontStyle": "",
-        "foreground": "#8FBCBB"
+        "foreground": "#D0B344"
       }
     },
     {
