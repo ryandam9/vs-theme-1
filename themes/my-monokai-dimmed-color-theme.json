@@ -73,30 +73,30 @@
     "surface.border": "#00000000"
   },
   "semanticTokenColors": {
-    "namespace": "#9872A2",
+    "namespace": "#A98AB2",
     "type": "#D0B344",
     "class": "#D0B344",
     "enum": "#D0B344",
     "interface": "#D0B344",
     "struct": "#D0B344",
-    "typeParameter": "#408080",
+    "typeParameter": "#54A9A9",
     "parameter": "#6089B4",
     "variable": "#C5C8C6",
     "variable.readonly": "#8080FF",
     "variable.defaultLibrary": "#C7444A",
-    "property": "#9872A2",
+    "property": "#A98AB2",
     "property.readonly": "#8080FF",
     "enumMember": "#8080FF",
-    "event": "#9872A2",
-    "function": "#CE6700",
-    "function.defaultLibrary": "#9872A2",
-    "method": "#CE6700",
-    "method.defaultLibrary": "#9872A2",
+    "event": "#A98AB2",
+    "function": "#E87400",
+    "function.defaultLibrary": "#A98AB2",
+    "method": "#E87400",
+    "method.defaultLibrary": "#A98AB2",
     "macro": "#D08442",
     "label": "#D9B700",
     "decorator": "#66D9EF",
     "selfParameter": "#AE81FF",
-    "builtinConstant": "#408080",
+    "builtinConstant": "#54A9A9",
     "*.declaration": {
       "fontStyle": "bold"
     },
@@ -106,17 +106,17 @@
     "*.static": {
       "fontStyle": "italic"
     },
-    "type.defaultLibrary:go": "#408080",
+    "type.defaultLibrary:go": "#54A9A9",
     "variable.readonly:go": "#8080FF",
     "selfParameter:python": "#AE81FF",
     "clsParameter:python": "#AE81FF",
-    "magicFunction:python": "#9872A2",
-    "builtinConstant:python": "#408080",
-    "module:python": "#9872A2",
+    "magicFunction:python": "#A98AB2",
+    "builtinConstant:python": "#54A9A9",
+    "module:python": "#A98AB2",
     "variable.defaultLibrary:typescript": "#CC555A",
     "variable.defaultLibrary:javascript": "#CC555A",
     "lifetime:rust": "#D08442",
-    "builtinType:rust": "#408080",
+    "builtinType:rust": "#54A9A9",
     "decorator:python": "#66D9EF",
     "function.decorator": "#66D9EF",
     "method.decorator": "#66D9EF",
@@ -177,7 +177,7 @@
       "scope": "constant.language",
       "settings": {
         "fontStyle": "",
-        "foreground": "#408080"
+        "foreground": "#54A9A9"
       }
     },
     {
@@ -201,7 +201,7 @@
       "scope": "storage",
       "settings": {
         "fontStyle": "",
-        "foreground": "#9872A2"
+        "foreground": "#A98AB2"
       }
     },
     {
@@ -228,7 +228,7 @@
       "scope": "entity.name.function",
       "settings": {
         "fontStyle": "",
-        "foreground": "#CE6700"
+        "foreground": "#E87400"
       }
     },
     {
@@ -244,7 +244,7 @@
       "scope": "support.function",
       "settings": {
         "fontStyle": "",
-        "foreground": "#9872A2"
+        "foreground": "#A98AB2"
       }
     },
     {
@@ -284,7 +284,7 @@
       "scope": "meta.function-call.object",
       "settings": {
         "fontStyle": "",
-        "foreground": "#9872A2"
+        "foreground": "#A98AB2"
       }
     },
     {
@@ -292,7 +292,7 @@
       "scope": "variable.other.property",
       "settings": {
         "fontStyle": "",
-        "foreground": "#9872A2"
+        "foreground": "#A98AB2"
       }
     },
     {
@@ -307,7 +307,7 @@
       ],
       "settings": {
         "fontStyle": "",
-        "foreground": "#9872A2"
+        "foreground": "#A98AB2"
       }
     },
     {
@@ -347,7 +347,7 @@
       "scope": "meta.tag.other, entity.name.tag.style, entity.name.tag.script, meta.tag.block.script, source.js.embedded punctuation.definition.tag.html, source.css.embedded punctuation.definition.tag.html",
       "settings": {
         "fontStyle": "",
-        "foreground": "#9872A2"
+        "foreground": "#A98AB2"
       }
     },
     {
@@ -402,7 +402,7 @@
       "scope": "meta.selector entity.other.attribute-name.id",
       "settings": {
         "fontStyle": "",
-        "foreground": "#9872A2"
+        "foreground": "#A98AB2"
       }
     },
     {
@@ -554,7 +554,7 @@
       "name": "Markup Quote",
       "scope": "markup.quote",
       "settings": {
-        "foreground": "#9872A2"
+        "foreground": "#A98AB2"
       }
     },
     {
