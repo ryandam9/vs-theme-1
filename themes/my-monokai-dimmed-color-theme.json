@@ -74,11 +74,11 @@
   },
   "semanticTokenColors": {
     "namespace": "#A98AB2",
-    "type": "#A6E22E",
-    "class": "#A6E22E",
-    "enum": "#A6E22E",
-    "interface": "#A6E22E",
-    "struct": "#A6E22E",
+    "type": "#8EC71C",
+    "class": "#8EC71C",
+    "enum": "#8EC71C",
+    "interface": "#8EC71C",
+    "struct": "#8EC71C",
     "typeParameter": "#5FC9A8",
     "parameter": "#6089B4",
     "variable": "#C5C8C6",
@@ -209,7 +209,7 @@
       "scope": "entity.name.class, entity.name.type, entity.name.namespace, entity.name.scope-resolution",
       "settings": {
         "fontStyle": "",
-        "foreground": "#A6E22E"
+        "foreground": "#8EC71C"
       }
     },
     {

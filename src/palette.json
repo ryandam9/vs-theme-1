@@ -56,7 +56,7 @@
   "pink":           "#FF0080",
 
   "//type": "DEVIATION from upstream Monokai Dimmed, which uses #9B0000 (~1.5:1 contrast on bg -- unreadable). Set back to #9B0000 to restore stock.",
-  "type":           "#A6E22E",
+  "type":           "#8EC71C",
 
   "// ---- diff / markup ----": "",
   "diffHeader":     "#E0EDDD",
