@@ -97,8 +97,8 @@
     "method.defaultLibrary": "$purple",
     "macro": "$orange",
     "label": "$gold",
-    "decorator": "$gold",
-    "selfParameter": "$red",
+    "decorator": "$decoratorRef",
+    "selfParameter": "$selfRef",
     "builtinConstant": "$teal",
     "*.declaration": {
       "fontStyle": "bold"
@@ -112,15 +112,16 @@
     "type.defaultLibrary:go": "$teal",
     "variable.readonly:go": "$violet",
     "namespace:go": "$string",
-    "selfParameter:python": "$red",
-    "clsParameter:python": "$red",
+    "selfParameter:python": "$selfRef",
+    "clsParameter:python": "$selfRef",
     "magicFunction:python": "$purple",
     "builtinConstant:python": "$teal",
     "module:python": "$purple",
     "variable.defaultLibrary:typescript": "$jsVar",
     "variable.defaultLibrary:javascript": "$jsVar",
     "lifetime:rust": "$orange",
-    "builtinType:rust": "$teal"
+    "builtinType:rust": "$teal",
+    "decorator:python": "$decoratorRef"
   },
   "tokenColors": [
     {
@@ -686,6 +687,20 @@
       "scope": "variable.language",
       "settings": {
         "foreground": "$red"
+      }
+    },
+    {
+      "name": "Python self / cls",
+      "scope": "variable.parameter.function.language.special.self.python, variable.parameter.function.language.python",
+      "settings": {
+        "foreground": "$selfRef"
+      }
+    },
+    {
+      "name": "Python decorator",
+      "scope": "entity.name.function.decorator.python, punctuation.definition.decorator.python, meta.function.decorator.python entity.name.function.python",
+      "settings": {
+        "foreground": "$decoratorRef"
       }
     }
   ]

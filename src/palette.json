@@ -41,6 +41,8 @@
   "yellow":         "#D0B344",
   "orange":         "#D08442",
   "red":            "#C7444A",
+  "selfRef":        "#AE81FF",
+  "decoratorRef":   "#66D9EF",
   "gray":           "#676867",
   "keyword":        "#676867",
   "keywordControl": "#9872A2",
