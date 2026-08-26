@@ -108,7 +108,6 @@
     },
     "type.defaultLibrary:go": "#408080",
     "variable.readonly:go": "#8080FF",
-    "namespace:go": "#9AA83A",
     "selfParameter:python": "#AE81FF",
     "clsParameter:python": "#AE81FF",
     "magicFunction:python": "#9872A2",

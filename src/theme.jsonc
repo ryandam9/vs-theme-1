@@ -111,7 +111,6 @@
     },
     "type.defaultLibrary:go": "$teal",
     "variable.readonly:go": "$violet",
-    "namespace:go": "$string",
     "selfParameter:python": "$selfRef",
     "clsParameter:python": "$selfRef",
     "magicFunction:python": "$purple",
