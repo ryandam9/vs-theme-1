@@ -95,7 +95,7 @@
     "macro": "#D08442",
     "label": "#D9B700",
     "decorator": "#54A9A9",
-    "selfParameter": "#D67BD6",
+    "selfParameter": "#F0E68C",
     "builtinConstant": "#5FC9A8",
     "*.declaration": {
       "fontStyle": "bold"
@@ -108,8 +108,8 @@
     },
     "type.defaultLibrary:go": "#5FC9A8",
     "variable.readonly:go": "#8080FF",
-    "selfParameter:python": "#D67BD6",
-    "clsParameter:python": "#D67BD6",
+    "selfParameter:python": "#F0E68C",
+    "clsParameter:python": "#F0E68C",
     "magicFunction:python": "#A98AB2",
     "builtinConstant:python": "#5FC9A8",
     "module:python": "#A98AB2",
@@ -694,7 +694,7 @@
       "name": "Python self / cls",
       "scope": "variable.parameter.function.language.special.self.python, variable.parameter.function.language.python",
       "settings": {
-        "foreground": "#D67BD6"
+        "foreground": "#F0E68C"
       }
     },
     {
