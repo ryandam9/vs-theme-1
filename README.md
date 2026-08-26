@@ -28,7 +28,7 @@ Everything lives in one file:
 src/palette.json     <- edit here
 ```
 
-Change `"type": "#8FBCBB"` and every type, class, struct, interface and enum updates at
+Change `"type": "#7BB75B"` and every type, class, struct, interface and enum updates at
 once. Then:
 
 ```sh
@@ -50,8 +50,26 @@ suffix. An unknown `$ref` **fails the build** rather than silently producing bla
 | `scripts/refify.js` | one-time re-scaffold against a newer upstream |
 | `samples/` | Go/Python/TS/Markdown/YAML visual test bed |
 
-`npm run verify` prints every deviation from upstream. Right now there is exactly one:
-the `#9B0000` -> `#8FBCBB` type color.
+`npm run verify` prints every deviation from upstream — 22 at present. `npm run tokens
+-- <file.go>` asks gopls what tokens it actually emits and reports which rule colors each
+one, with a contrast warning below 4.5:1.
+
+### Current palette
+
+| role | color | contrast |
+| --- | --- | --- |
+| function / method | `#66D9EF` cyan | 10.11:1 |
+| variable | `#C5C8C6` default fg | 9.88:1 |
+| builtin type | `#5FC9A8` mint | 8.26:1 |
+| string | `#E0A882` soft peach | 8.01:1 |
+| `self` / `cls` | `#E08FE0` light magenta | 7.28:1 |
+| class / type | `#7BB75B` green | 6.96:1 |
+| keyword | `#8FA3B8` blue-gray | 6.43:1 |
+| decorator | `#54A9A9` teal | 6.05:1 |
+| namespace | `#A98AB2` purple | 5.53:1 |
+| const / readonly | `#8080FF` violet | 5.12:1 |
+| parameter | `#6089B4` blue | 4.55:1 |
+| comment | `#8A7F6E` taupe | 4.24:1 |
 
 ## Finding out what to change
 
@@ -72,7 +90,7 @@ To experiment without rebuilding, override live in `settings.json` — no reload
 
 ```jsonc
 "editor.semanticTokenColorCustomizations": {
-  "[My Monokai Dimmed]": { "enabled": true, "rules": { "type": "#8FBCBB" } }
+  "[My Monokai Dimmed]": { "enabled": true, "rules": { "type": "#7BB75B" } }
 }
 ```
 
@@ -86,17 +104,94 @@ npm run verify    # build + diff against upstream
 
 Open the files in `samples/` side by side as a visual test.
 
-## Installing anywhere
+## Installing on another machine (macOS)
+
+The theme ships as a single `.vsix` file. No Marketplace account, no publisher ID.
+
+### 1. Build the package
+
+On the machine that has this repo:
 
 ```sh
-npm run package                                   # -> my-monokai-1.0.0.vsix
-code --install-extension my-monokai-1.0.0.vsix    # on any machine
+git clone git@github.com:ryandam9/vs-theme-1.git my-monokai
+cd my-monokai
+npm run package
 ```
 
-The `.vsix` needs no account and works in VS Code, VSCodium, Cursor and Kiro. To publish
-to a registry instead, set a real `publisher` in `package.json`, then
-`npx @vscode/vsce publish` (VS Code Marketplace, needs an Azure DevOps PAT) or
-`npx ovsx publish` (Open VSX).
+That writes `my-monokai-1.0.0.vsix` (about 9 KB) into the repo root. Node 18+ is the only
+prerequisite — `brew install node` if the Mac does not have it. There are no runtime
+dependencies to install; `npm run package` shells out to `npx @vscode/vsce`, which fetches
+the packager on demand.
+
+### 2. Install it
+
+Either from the terminal:
+
+```sh
+code --install-extension my-monokai-1.0.0.vsix
+```
+
+If `code` is not on your PATH on macOS, open VS Code and run
+**Shell Command: Install 'code' command in PATH** from the Command Palette
+(`Cmd+Shift+P`) first.
+
+Or entirely through the UI, if you would rather not touch the terminal:
+
+1. `Cmd+Shift+X` to open the Extensions view
+2. Click the `...` menu at the top of the panel
+3. Choose **Install from VSIX...**
+4. Select `my-monokai-1.0.0.vsix`
+
+### 3. Select the theme
+
+`Cmd+K` `Cmd+T`, then pick **My Monokai Dimmed**.
+
+Or set it directly in `~/Library/Application Support/Code/User/settings.json`:
+
+```jsonc
+"workbench.colorTheme": "My Monokai Dimmed"
+```
+
+### 4. Turn on gopls semantic tokens (Go users)
+
+The theme's semantic rules only fire when the language server sends semantic tokens.
+Pylance does by default; **gopls does not**. Add this to the same `settings.json`:
+
+```jsonc
+"gopls": { "ui.semanticTokens": true }
+```
+
+Then reload the window. Without it, Go falls back to TextMate scopes and types, functions
+and namespaces all lose their distinct colors.
+
+### Updating later
+
+```sh
+git pull
+npm run package
+code --install-extension my-monokai-1.0.0.vsix --force
+```
+
+`--force` overwrites the installed copy. Reload the window afterwards.
+
+### Skipping the build entirely
+
+If you would rather not run Node on the target Mac, build the `.vsix` once anywhere and
+copy the file over — AirDrop, scp, a GitHub release attachment. Step 2 is all the target
+machine needs.
+
+### Other editors
+
+The same `.vsix` installs in VSCodium, Cursor and Kiro. Substitute the matching CLI
+(`codium`, `cursor`) for `code`, or use the Install from VSIX menu.
+
+### Reloading after a change
+
+| what changed | action |
+| --- | --- |
+| workbench `colors` | live on save |
+| `tokenColors` (TextMate) | live on save |
+| `semanticTokenColors` | **reload the window** |
 
 ## Upgrading against a newer VS Code
 
