@@ -48,6 +48,12 @@ suffix. An unknown `$ref` **fails the build** rather than silently producing bla
 | `build.js` | resolves refs -> `themes/…json` |
 | `scripts/verify.js` | diffs the build against upstream |
 | `scripts/refify.js` | one-time re-scaffold against a newer upstream |
+| `scripts/derive.js` | builds a full palette from a short one (see *Palette variants*) |
+| `scripts/color.js` | OKLCH + WCAG contrast math, no dependencies |
+| `scripts/audit.js` | contrast + role-distinctness check across all variants |
+| `scripts/preview.js` | renders every variant side by side to `preview.html` |
+| `scripts/install-all.sh` | builds, packages and installs every theme in one go |
+| `palettes/<name>/` | one self-contained variant extension per palette |
 | `samples/` | Go/Python/TS/Markdown/YAML visual test bed |
 
 `npm run verify` prints every deviation from upstream — 22 at present. `npm run tokens
@@ -70,6 +76,89 @@ one, with a contrast warning below 4.5:1.
 | const / readonly | `#8080FF` violet | 5.12:1 |
 | parameter | `#6089B4` blue | 4.55:1 |
 | comment | `#8A7F6E` taupe | 4.24:1 |
+
+## Palette variants
+
+Each directory under `palettes/` is a **standalone theme extension** built from a short
+source palette. Pick one, build it, install it:
+
+```sh
+cd palettes/bee_eater
+npm run install-local        # build + package + install into VS Code
+```
+
+Then choose the theme in `Preferences: Color Theme`. Variants install alongside each
+other and alongside the base theme, so you can keep all of them and switch freely.
+
+Or install everything at once — the base theme plus all twelve variants:
+
+```sh
+npm run install-all
+```
+
+```sh
+scripts/install-all.sh bee_eater galah   # only these palettes
+scripts/install-all.sh -e kiro           # into Kiro / VSCodium / Cursor instead of code
+scripts/install-all.sh -n                # build and package only, skip installing
+```
+
+```sh
+node build.js bee_eater      # build one variant
+node build.js --all          # base + every variant
+npm run audit                # contrast + distinctness report
+npm run preview              # write preview.html: all variants side by side
+```
+
+### How a 6-colour palette becomes a 71-colour theme
+
+Only `palettes/<name>/source.json` is hand-written:
+
+```jsonc
+{
+  "name": "bee_eater",
+  "displayName": "Bee-eater",
+  "mode": "dark",                    // flip to "light" to invert the whole theme
+  "colors": ["#00346E", "#007CBF", "#06ABDF", "#EDD03E", "#F5A200", "#6D8600", "#424D0C"],
+  "overrides": {}                    // any palette key here wins over the derived value
+}
+```
+
+`scripts/derive.js` turns that into the full palette. The rule it follows: **Monokai
+Dimmed's lightness architecture is what makes it readable, so keep it and replace only the
+hue architecture.**
+
+1. **Anchor.** The darkest source colour that still carries a hue (for a light theme, the
+   lightest) becomes what the whole UI is tinted toward — a kookaburra gets a navy
+   background, a fairywren a brown one. Override with `"anchor": "#02407c"`.
+2. **Surfaces** keep upstream's exact lightness and take the anchor's hue at low chroma, so
+   the UI's depth ordering is untouched. In `"light"` mode the background and foreground
+   bands are swapped and re-spaced instead.
+3. **Syntax roles** snap to the nearest source colour *by hue*, inherit its hue and chroma,
+   and keep their own lightness — so strings stay green if the palette has a green, and
+   land somewhere sensible if it does not.
+4. **Sparse palettes get filled in.** A palette that is one narrow arc (plains-wanderer is
+   all browns) or a few tight clusters (oriole is rust / olive / lavender, nothing between)
+   cannot carry 20 distinct roles. The arc is extended outward and its interior gaps filled
+   with derived analogous hues, at the palette's own spacing. The real colours still win the
+   roles nearest them; the derived ones only fill what was missing.
+5. **Contrast floors** are enforced against the *derived* background, per role — `8.0` for
+   the editor foreground, `4.5` for syntax, `3.2` for comments, `2.4` for punctuation grey.
+6. **Roles that still collide** are pushed apart in lightness, and when a hue is carrying
+   too many roles to separate that way, in chroma too: same hue, pale to vivid.
+7. **Meaning-carrying colours are left alone.** Errors stay red, diff-insert stays green,
+   terminal ANSI keeps its hue ordering (nudged 25% toward the palette). These are only
+   moved far enough to stay readable on the new background.
+
+`npm run audit` checks the result — every role against its contrast floor, and every pair of
+syntax roles against each other. All 12 palettes currently pass both.
+
+The generated `palettes/<name>/palette.json` is written out in the same format as
+`src/palette.json`, so a variant is exactly as inspectable as the base theme. To change one
+colour, put it in `overrides` and rebuild.
+
+Palettes are from the [feathers](https://github.com/shandiya/feathers) R package
+(Australian birds).
+
 
 ## Finding out what to change
 

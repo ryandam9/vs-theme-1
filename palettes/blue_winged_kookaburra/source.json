@@ -1,0 +1,26 @@
+{
+  "//": "Hand-edited SOURCE for this theme. Everything else in this directory is generated.",
+  "//mode": "\"dark\" or \"light\" -- flip this one word to invert the whole theme.",
+  "//colors": "The palette. Every one of the ~70 theme colours is derived from these.",
+  "//overrides": "Optional. Any palette key here wins over the derived value, e.g. \"string\": \"#8FA33F\".",
+  "//anchor": "Optional hex. Which palette colour the whole UI is tinted toward. Defaults to the darkest (lightest, in a light theme) colour that still carries a hue.",
+  "name": "blue_winged_kookaburra",
+  "displayName": "Blue-winged Kookaburra",
+  "mode": "dark",
+  "tintStrength": 1,
+  "ansiNudge": 0.25,
+  "colors": [
+    "#b5effb",
+    "#0b7595",
+    "#02407c",
+    "#06213a",
+    "#c45829",
+    "#9C4620",
+    "#622C14",
+    "#d4d8e3",
+    "#b8bcd8",
+    "#ad8d9f",
+    "#725f77"
+  ],
+  "overrides": {}
+}

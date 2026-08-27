@@ -1,5 +1,32 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- **Palette variants.** `palettes/<name>/` is a self-contained theme extension generated
+  from a short source palette; `cd palettes/<name> && npm run install-local` builds,
+  packages and installs it. Twelve palettes ship, two of them light themes.
+- **`scripts/derive.js`** — expands a 5-11 colour palette into the full 71-colour palette.
+  Keeps Monokai Dimmed's lightness structure, snaps each role to the nearest source colour
+  by hue, extends sparse palettes with derived analogous hues, and enforces per-role
+  contrast floors against the derived background.
+- **`scripts/color.js`** — OKLCH conversion, sRGB gamut clipping and WCAG contrast, no
+  dependencies.
+- **`scripts/audit.js`** (`npm run audit`) — checks every variant's roles against their
+  contrast floors and against each other for visual collisions.
+- **`scripts/preview.js`** (`npm run preview`) — renders every variant side by side to
+  `preview.html`.
+- **`scripts/install-all.sh`** (`npm run install-all`) — builds, packages and installs the
+  base theme and every variant in one go. Takes palette names to narrow it down, `-e <bin>`
+  to target Kiro / VSCodium / Cursor, `-n` to package without installing.
+- `node build.js <palette>` and `node build.js --all`.
+
+### Changed
+
+- `build.js` now resolves `src/theme.jsonc` against any palette rather than only
+  `src/palette.json`. The base theme output is byte-identical.
+
 ## 1.0.0
 
 A fork of VS Code's built-in **Monokai Dimmed** (VS Code 1.134.0).

@@ -1,0 +1,41 @@
+{
+  "name": "rose-crowned-fruit-dove",
+  "displayName": "Rose-crowned Fruit Dove",
+  "description": "A personal fork of Monokai Dimmed with explicit semantic token colors, so Go, Python, TypeScript and Rust all look the same. Recoloured from the Rose-crowned Fruit Dove palette.",
+  "version": "1.0.0",
+  "publisher": "ravi",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "monokai",
+    "dark",
+    "semantic highlighting",
+    "theme",
+    "Rose-crowned Fruit Dove"
+  ],
+  "galleryBanner": {
+    "color": "#142217",
+    "theme": "dark"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "id": "Rose-crowned Fruit Dove",
+        "label": "Rose-crowned Fruit Dove",
+        "uiTheme": "vs-dark",
+        "path": "./themes/rose-crowned-fruit-dove-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "cd ../.. && node build.js rose_crowned_fruit_dove",
+    "package": "npm run build && npx --yes @vscode/vsce package --no-dependencies --allow-missing-repository",
+    "install-local": "npm run package && code --install-extension rose-crowned-fruit-dove-1.0.0.vsix --force"
+  }
+}

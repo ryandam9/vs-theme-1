@@ -1,0 +1,23 @@
+{
+  "//": "Hand-edited SOURCE for this theme. Everything else in this directory is generated.",
+  "//mode": "\"dark\" or \"light\" -- flip this one word to invert the whole theme.",
+  "//colors": "The palette. Every one of the ~70 theme colours is derived from these.",
+  "//overrides": "Optional. Any palette key here wins over the derived value, e.g. \"string\": \"#8FA33F\".",
+  "//anchor": "Optional hex. Which palette colour the whole UI is tinted toward. Defaults to the darkest (lightest, in a light theme) colour that still carries a hue.",
+  "name": "cassowary",
+  "displayName": "Cassowary",
+  "mode": "dark",
+  "tintStrength": 1,
+  "ansiNudge": 0.25,
+  "colors": [
+    "#BDA14D",
+    "#3EBCB6",
+    "#0169C4",
+    "#153460",
+    "#D5114E",
+    "#A56EB6",
+    "#4B1C57",
+    "#09090C"
+  ],
+  "overrides": {}
+}

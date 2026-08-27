@@ -1,0 +1,21 @@
+{
+  "//": "Hand-edited SOURCE for this theme. Everything else in this directory is generated.",
+  "//mode": "\"dark\" or \"light\" -- flip this one word to invert the whole theme.",
+  "//colors": "The palette. Every one of the ~70 theme colours is derived from these.",
+  "//overrides": "Optional. Any palette key here wins over the derived value, e.g. \"string\": \"#8FA33F\".",
+  "//anchor": "Optional hex. Which palette colour the whole UI is tinted toward. Defaults to the darkest (lightest, in a light theme) colour that still carries a hue.",
+  "name": "galah",
+  "displayName": "Galah",
+  "mode": "light",
+  "tintStrength": 1,
+  "ansiNudge": 0.25,
+  "colors": [
+    "#FFD2CF",
+    "#E9A7BB",
+    "#D05478",
+    "#AAB9CC",
+    "#8390A2",
+    "#4C5766"
+  ],
+  "overrides": {}
+}
