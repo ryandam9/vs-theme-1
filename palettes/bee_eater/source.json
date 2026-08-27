@@ -18,5 +18,7 @@
     "#6D8600",
     "#424D0C"
   ],
-  "overrides": {}
+  "overrides": {
+    "comment": "#889484"
+  }
 }
