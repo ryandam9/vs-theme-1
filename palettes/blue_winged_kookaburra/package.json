@@ -1,7 +1,7 @@
 {
   "name": "blue-winged-kookaburra",
   "displayName": "Blue-winged Kookaburra",
-  "description": "A personal fork of Monokai Dimmed with explicit semantic token colors, so Go, Python, TypeScript and Rust all look the same. Recoloured from the Blue-winged Kookaburra palette.",
+  "description": "A bird-inspired dark VS Code theme with deep navy surfaces, Blue-winged Kookaburra feather blues, warm cream text and restrained rufous accents.",
   "version": "1.0.0",
   "publisher": "ravi",
   "license": "MIT",
@@ -13,14 +13,15 @@
     "Themes"
   ],
   "keywords": [
-    "monokai",
+    "kookaburra",
+    "bird",
+    "blue",
     "dark",
     "semantic highlighting",
-    "theme",
-    "Blue-winged Kookaburra"
+    "theme"
   ],
   "galleryBanner": {
-    "color": "#141f2b",
+    "color": "#081521",
     "theme": "dark"
   },
   "contributes": {
