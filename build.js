@@ -115,6 +115,7 @@ function buildVariant(name) {
 
   const label = source.displayName;
   const id = slug(label);
+  const version = source.version || ROOT_PKG.version;
   const { built, errors, used } = resolveTheme(themeSrc, palette);
   if (errors.length) fail(errors);
   built.name = label;
@@ -141,7 +142,7 @@ function buildVariant(name) {
     name: id,
     displayName: label,
     description: `${ROOT_PKG.description} Recoloured from the ${source.displayName} palette.`,
-    version: ROOT_PKG.version,
+    version,
     publisher: ROOT_PKG.publisher,
     license: ROOT_PKG.license,
     private: true,
@@ -156,7 +157,7 @@ function buildVariant(name) {
     scripts: {
       build: `cd ../.. && node build.js ${name}`,
       package: `npm run build && npx --yes @vscode/vsce package --no-dependencies --allow-missing-repository`,
-      'install-local': `npm run package && code --install-extension ${id}-${ROOT_PKG.version}.vsix --force`,
+      'install-local': `npm run package && code --install-extension ${id}-${version}.vsix --force`,
     },
   }, null, 2) + '\n');
 
@@ -183,7 +184,7 @@ function buildVariant(name) {
 
   report(themeFile, built, palette, used);
   console.log(`  mode / anchor         : ${meta.mode} / ${meta.anchor} (${meta.poolSize} hues)`);
-  return { name, id, label, dir, mode: meta.mode, bg: palette.bg };
+  return { name, id, label, dir, mode: meta.mode, bg: palette.bg, version };
 }
 
 const arg = process.argv[2];
