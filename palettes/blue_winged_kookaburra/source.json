@@ -1,11 +1,13 @@
 {
   "//": "Hand-edited SOURCE for this theme. Everything else in this directory is generated.",
+  "//version": "Optional per-theme extension version. Falls back to the root package version when omitted.",
   "//mode": "\"dark\" or \"light\" -- flip this one word to invert the whole theme.",
   "//colors": "Original feathers palette. Keep these swatches intact so the theme remains traceable to its bird inspiration.",
   "//overrides": "Intentional VS Code role mapping. Deep navy is the habitat, wing blues carry structure/callables, feather cream carries normal text/strings, and rufous is reserved for special syntax.",
   "//anchor": "The kookaburra's deep navy tail/wing shadow drives the workbench tint.",
   "name": "blue_winged_kookaburra",
   "displayName": "Blue-winged Kookaburra",
+  "version": "1.0.1",
   "mode": "dark",
   "tintStrength": 0.8,
   "ansiNudge": 0.16,
