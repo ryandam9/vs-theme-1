@@ -13,13 +13,13 @@ Bird inspiration: https://ryandam.net/blog/2026/06/06/feathers/index.html
 The theme deliberately follows the bird's visual hierarchy instead of distributing every source hue evenly across the editor.
 
 - **Deep navy** (`#081521`) dominates the workbench, matching the dark blue wing/tail shadows.
-- **Warm feather cream** (`#E2DDD0`) is the normal source foreground.
+- **Soft feather cream** (`#D2D0C8`) is the normal source foreground. It is intentionally quieter than the previous `#E2DDD0`, allowing semantic colours to stand out more clearly.
 - **Cream strings** (`#D8C7A1`) separate literals from the blue structural syntax and remove the previous Monokai-like cyan-string feel.
 - **Pale sky blue** (`#B5EFFB`) is reserved for functions and methods: the brightest coding colour, echoing the bird's spectacular pale-blue wing feathers.
-- **Wing blue** (`#59A8D0`) identifies types/classes, while **mid blue** (`#78B8DF`) handles parameters and numbers.
-- **Blue-grey** (`#9CB4C4`) replaces most of the previous purple property/namespace treatment.
+- **Wing blue** (`#4F9FC9`) identifies types/classes, while the softer **steel blue** (`#86AAC4`) handles parameters and numbers. This increases separation between callable, structural, and value-oriented syntax.
+- **Blue-grey** (`#98AEBB`) handles properties/namespaces without introducing a purple cast.
 - **Pale plumage grey** (`#D4D8E3`) is used for control keywords rather than another saturated hue.
-- **Rufous** (`#D2693D`) identifies `self` / special references; orange/rust is intentionally rare so it remains distinctive.
+- **Soft rufous** (`#C97450`) identifies `self` / `cls` and special references. It remains distinctive without dominating every line that contains `self`.
 - **Turquoise** (`#3E9AB2`) is reserved for decorators and related special structure.
 - Comments use a warm neutral (`#9A9188`) rather than blue or brown, staying secondary but comfortably readable.
 
@@ -29,19 +29,31 @@ The intended first impression is therefore:
 
 This is intentionally different from the base My Monokai Dimmed theme even though both share the same semantic-token architecture.
 
+## Syntax hierarchy
+
+The polish pass deliberately separates the three major blue roles:
+
+| Role | Colour | Visual priority |
+| --- | --- | --- |
+| Function / method | `#B5EFFB` | Brightest blue; callable focus |
+| Type / class | `#4F9FC9` | Strong wing blue; structural |
+| Parameter / number | `#86AAC4` | Softer steel blue; supporting values |
+| Property / namespace | `#98AEBB` | Muted blue-grey; secondary structure |
+
 ## Representative contrast on `#081521`
 
 | Role | Colour | Approx. contrast |
 | --- | --- | ---: |
-| Normal text | `#E2DDD0` | 13.6:1 |
+| Normal text | `#D2D0C8` | 11.9:1 |
 | Function / method | `#B5EFFB` | 14.7:1 |
 | String | `#D8C7A1` | 11.1:1 |
 | Control keyword | `#D4D8E3` | 12.9:1 |
-| Keyword | `#BFC7CD` | 10.8:1 |
-| Type / class | `#59A8D0` | 7.0:1 |
-| Parameter / number | `#78B8DF` | 8.5:1 |
+| Keyword | `#B7C0C7` | 10.0:1 |
+| Property / namespace | `#98AEBB` | 8.0:1 |
+| Parameter / number | `#86AAC4` | 7.5:1 |
+| Type / class | `#4F9FC9` | 6.3:1 |
 | Comment | `#9A9188` | 6.0:1 |
-| Rufous special ref | `#D2693D` | 5.1:1 |
+| Rufous special ref | `#C97450` | 5.4:1 |
 
 ## Source of truth
 
