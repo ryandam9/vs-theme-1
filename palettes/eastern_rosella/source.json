@@ -20,6 +20,11 @@
   ],
   "overrides": {
     "bg": "#182229",
+    "bgDeep": "#182229",
+    "bgTabs": "#182229",
+    "bgActivity": "#182229",
+    "bgTabInactive": "#182229",
+    "chrome": "#182229",
     "comment": "#8795A1"
   }
 }
