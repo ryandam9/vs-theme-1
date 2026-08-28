@@ -7,7 +7,7 @@
   "//anchor": "Optional hex. Which palette colour the whole UI is tinted toward. Defaults to the darkest (lightest, in a light theme) colour that still carries a hue.",
   "name": "eastern_rosella",
   "displayName": "Eastern Rosella",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "mode": "dark",
   "tintStrength": 1,
   "ansiNudge": 0.25,
@@ -39,6 +39,14 @@
       "settings": {
         "fontStyle": "",
         "foreground": "#C9C2E8"
+      }
+    },
+    {
+      "name": "Python import keywords",
+      "scope": "keyword.control.import.python",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "#6FA8D8"
       }
     }
   ]
