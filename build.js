@@ -121,6 +121,15 @@ function buildVariant(name) {
   built.name = label;
   built.type = meta.mode;
 
+  // Optional per-theme TextMate rules are appended after the shared template so
+  // variants can refine language-specific scopes without changing every theme.
+  if (Array.isArray(source.tokenColorOverrides) && source.tokenColorOverrides.length) {
+    const resolved = resolveTheme(source.tokenColorOverrides, palette);
+    if (resolved.errors.length) fail(resolved.errors);
+    built.tokenColors.push(...resolved.built);
+    for (const key of resolved.used) used.add(key);
+  }
+
   // The generated palette is written out too, so a variant stays as inspectable and
   // hand-editable as the base theme.
   const themesDir = path.join(dir, 'themes');
@@ -178,7 +187,7 @@ function buildVariant(name) {
     'npm run package          # build + package only',
     'npm run build            # regenerate the theme JSON only', '```', '',
     'Then pick **' + label + '** in `Preferences: Color Theme`.', '',
-    'Edit `source.json` (palette, `mode`, or `overrides`) and rebuild.', '',
+    'Edit `source.json` (palette, `mode`, `overrides`, or `tokenColorOverrides`) and rebuild.', '',
     `Palette from the [feathers](https://github.com/shandiya/feathers) R package.`, '',
   ].join('\n'));
 
