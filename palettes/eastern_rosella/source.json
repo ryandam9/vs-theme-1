@@ -7,7 +7,7 @@
   "//anchor": "Optional hex. Which palette colour the whole UI is tinted toward. Defaults to the darkest (lightest, in a light theme) colour that still carries a hue.",
   "name": "eastern_rosella",
   "displayName": "Eastern Rosella",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "mode": "dark",
   "tintStrength": 1,
   "ansiNudge": 0.25,
@@ -27,7 +27,8 @@
     "bgActivity": "#182229",
     "bgTabInactive": "#182229",
     "chrome": "#182229",
-    "comment": "#8795A1"
+    "comment": "#8795A1",
+    "string": "#9FC6A0"
   },
   "tokenColorOverrides": [
     {
