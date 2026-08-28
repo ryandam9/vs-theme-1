@@ -11,7 +11,7 @@
     "list.hoverBackground": "#38493e",
     "list.highlightForeground": "#d88c48",
     "button.background": "#4a5b4f",
-    "editor.background": "#132218",
+    "editor.background": "#182229",
     "editor.foreground": "#c1cac4",
     "editor.selectionBackground": "#616c7880",
     "minimap.selectionHighlight": "#616c7880",
@@ -51,7 +51,7 @@
     "agentsChatInput.border": "#25342a",
     "agentsChatInput.focusBorder": "#3f6184",
     "agentsNewSessionButton.border": "#25342a",
-    "terminal.ansiBlack": "#132218",
+    "terminal.ansiBlack": "#182229",
     "terminal.ansiRed": "#d3355b",
     "terminal.ansiGreen": "#87b42a",
     "terminal.ansiYellow": "#acb632",
@@ -145,7 +145,7 @@
       "scope": "comment",
       "settings": {
         "fontStyle": "",
-        "foreground": "#b08e11"
+        "foreground": "#8795A1"
       }
     },
     {
