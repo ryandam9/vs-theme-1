@@ -7,7 +7,7 @@ A dark recolour of My Monokai Dimmed, derived from the
 
 Every one of the ~70 theme colours is snapped to the nearest palette colour by hue,
 keeps Monokai Dimmed's lightness structure, and is checked against a contrast floor
-on the derived background (`#132218`).
+on the derived background (`#10181E`).
 
 ## Build and install
 
@@ -19,6 +19,6 @@ npm run build            # regenerate the theme JSON only
 
 Then pick **Eastern Rosella** in `Preferences: Color Theme`.
 
-Edit `source.json` (palette, `mode`, or `overrides`) and rebuild.
+Edit `source.json` (palette, `mode`, `overrides`, `colorOverrides`, or `tokenColorOverrides`) and rebuild.
 
 Palette from the [feathers](https://github.com/shandiya/feathers) R package.
