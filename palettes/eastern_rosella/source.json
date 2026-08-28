@@ -18,5 +18,8 @@
     "#b8c9dc",
     "#2f7ab9"
   ],
-  "overrides": {}
+  "overrides": {
+    "bg": "#182229",
+    "comment": "#8795A1"
+  }
 }
