@@ -2,7 +2,7 @@
   "name": "eastern-rosella",
   "displayName": "Eastern Rosella",
   "description": "A personal fork of Monokai Dimmed with explicit semantic token colors, so Go, Python, TypeScript and Rust all look the same. Recoloured from the Eastern Rosella palette.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "ravi",
   "license": "MIT",
   "private": true,
@@ -36,6 +36,6 @@
   "scripts": {
     "build": "cd ../.. && node build.js eastern_rosella",
     "package": "npm run build && npx --yes @vscode/vsce package --no-dependencies --allow-missing-repository",
-    "install-local": "npm run package && code --install-extension eastern-rosella-1.0.2.vsix --force"
+    "install-local": "npm run package && code --install-extension eastern-rosella-1.0.3.vsix --force"
   }
 }
