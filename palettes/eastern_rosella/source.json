@@ -3,11 +3,12 @@
   "//mode": "\"dark\" or \"light\" -- flip this one word to invert the whole theme.",
   "//colors": "The palette. Every one of the ~70 theme colours is derived from these.",
   "//overrides": "Optional. Any palette key here wins over the derived value, e.g. \"string\": \"#8FA33F\".",
+  "//colorOverrides": "Optional per-theme VS Code workbench colors layered over the shared theme. Use these for independent container/surface treatment.",
   "//tokenColorOverrides": "Optional per-theme TextMate rules appended after the shared theme. Use these for language-specific refinements without affecting other themes.",
   "//anchor": "Optional hex. Which palette colour the whole UI is tinted toward. Defaults to the darkest (lightest, in a light theme) colour that still carries a hue.",
   "name": "eastern_rosella",
   "displayName": "Eastern Rosella",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "mode": "dark",
   "tintStrength": 1,
   "ansiNudge": 0.25,
@@ -21,14 +22,28 @@
     "#2f7ab9"
   ],
   "overrides": {
-    "bg": "#182229",
+    "bg": "#10181E",
     "bgDeep": "#182229",
-    "bgTabs": "#182229",
-    "bgActivity": "#182229",
-    "bgTabInactive": "#182229",
-    "chrome": "#182229",
+    "bgTabs": "#151F26",
+    "bgActivity": "#11191F",
+    "bgTabInactive": "#151F26",
+    "chrome": "#141C22",
     "comment": "#8795A1",
     "string": "#9FC6A0"
+  },
+  "colorOverrides": {
+    "titleBar.inactiveBackground": "#141C22",
+    "titleBar.border": "#2A3942",
+    "activityBar.border": "#2A3942",
+    "sideBar.border": "#2A3942",
+    "sideBarSectionHeader.background": "#182229",
+    "editorGroupHeader.noTabsBackground": "#151F26",
+    "editorGroupHeader.tabsBorder": "#2A3942",
+    "editorGroup.border": "#2A3942",
+    "tab.activeBackground": "#10181E",
+    "tab.border": "#2A3942",
+    "tab.lastPinnedBorder": "#2A3942",
+    "panel.border": "#2A3942"
   },
   "tokenColorOverrides": [
     {
