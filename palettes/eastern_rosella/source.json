@@ -3,9 +3,11 @@
   "//mode": "\"dark\" or \"light\" -- flip this one word to invert the whole theme.",
   "//colors": "The palette. Every one of the ~70 theme colours is derived from these.",
   "//overrides": "Optional. Any palette key here wins over the derived value, e.g. \"string\": \"#8FA33F\".",
+  "//tokenColorOverrides": "Optional per-theme TextMate rules appended after the shared theme. Use these for language-specific refinements without affecting other themes.",
   "//anchor": "Optional hex. Which palette colour the whole UI is tinted toward. Defaults to the darkest (lightest, in a light theme) colour that still carries a hue.",
   "name": "eastern_rosella",
   "displayName": "Eastern Rosella",
+  "version": "1.0.1",
   "mode": "dark",
   "tintStrength": 1,
   "ansiNudge": 0.25,
@@ -26,5 +28,18 @@
     "bgTabInactive": "#182229",
     "chrome": "#182229",
     "comment": "#8795A1"
-  }
+  },
+  "tokenColorOverrides": [
+    {
+      "name": "Python triple-quoted strings / docstrings",
+      "scope": [
+        "string.quoted.docstring.multi.python",
+        "string.quoted.multi.python"
+      ],
+      "settings": {
+        "fontStyle": "",
+        "foreground": "#C9C2E8"
+      }
+    }
+  ]
 }
