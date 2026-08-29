@@ -53,7 +53,7 @@
     "list.activeSelectionBackground": "#1f533c",
     "list.hoverBackground": "#b8c9dc",
     "list.hoverForeground": "#141C22",    
-    "sideBar.foreground": "#C9C2E8",
+    "sideBar.foreground": "#8795A1",
     "activityBar.border": "#2f5322"
   },
   "tokenColorOverrides": [
