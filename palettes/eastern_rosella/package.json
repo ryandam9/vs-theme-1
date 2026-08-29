@@ -2,7 +2,7 @@
   "name": "eastern-rosella",
   "displayName": "Eastern Rosella",
   "description": "A personal fork of Monokai Dimmed with explicit semantic token colors, so Go, Python, TypeScript and Rust all look the same. Recoloured from the Eastern Rosella palette.",
-  "version": "1.0.4",
+  "version": "1.0.8",
   "publisher": "ravi",
   "license": "MIT",
   "private": true,
