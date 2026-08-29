@@ -175,7 +175,7 @@ function buildVariant(name) {
     scripts: {
       build: `cd ../.. && node build.js ${name}`,
       package: `npm run build && npx --yes @vscode/vsce package --no-dependencies --allow-missing-repository`,
-      'install-local': `npm run package && code --install-extension ${id}-${version}.vsix --force`,
+      'install-local': `npm run package && node ../../scripts/install-local.js`,
     },
   }, null, 2) + '\n');
 
